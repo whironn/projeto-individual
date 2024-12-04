@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
-
 # Classe abstrata
 class Afiliado(ABC):
     def __init__(self, nome, ID, contato, categoria, status, filial, data_de_emissao):
@@ -96,7 +95,6 @@ def apagar_afiliado():
         afiliados.pop(index)
         atualizar_lista() # Atualiza a lista
         messagebox.showinfo("Sucesso", "Afiliado apagado com sucesso.")
-
 
 # Configuração da janela principal
 janela = tk.Tk()
@@ -194,7 +192,7 @@ lista_afiliados.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
 botao_atualizar = ttk.Button(aba_lista, text="Atualizar Lista", command=atualizar_lista)
 botao_atualizar.grid(row=1, column=0, pady=10, padx=10, sticky="nsew")
 
-# Botão pra apagar item da lista 
+# Botão pra apagar itens da lista 
 botao_apagar = ttk.Button(aba_lista, text="Apagar", command=apagar_afiliado)
 botao_apagar.grid(row=2, column=0, pady=10)
 
